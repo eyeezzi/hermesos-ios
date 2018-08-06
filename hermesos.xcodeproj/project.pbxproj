@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		539467FCDBD3EB1EF66C8852 /* Pods_hermesos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58196F1AF43EDFEFAFA60B95 /* Pods_hermesos.framework */; };
 		5971F2732119094F007D36BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F2722119094F007D36BC /* AppDelegate.swift */; };
 		5971F2752119094F007D36BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F2742119094F007D36BC /* ViewController.swift */; };
 		5971F2782119094F007D36BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5971F2762119094F007D36BC /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58196F1AF43EDFEFAFA60B95 /* Pods_hermesos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hermesos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5971F26F2119094F007D36BC /* hermesos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hermesos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5971F2722119094F007D36BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5971F2742119094F007D36BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		5971F27921190952007D36BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5971F27C21190952007D36BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5971F27E21190952007D36BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AB24153BF2897C2987B4B3B /* Pods-hermesos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hermesos.release.xcconfig"; path = "Pods/Target Support Files/Pods-hermesos/Pods-hermesos.release.xcconfig"; sourceTree = "<group>"; };
+		9C8F5F95B4E9E9F8903F8D0A /* Pods-hermesos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hermesos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hermesos/Pods-hermesos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				539467FCDBD3EB1EF66C8852 /* Pods_hermesos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DF8B82506EC612DF3AF6273 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58196F1AF43EDFEFAFA60B95 /* Pods_hermesos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5971F2662119094F007D36BC = {
 			isa = PBXGroup;
 			children = (
 				5971F2712119094F007D36BC /* hermesos */,
 				5971F2702119094F007D36BC /* Products */,
+				6B660194A4AF85B009FAD7AA /* Pods */,
+				2DF8B82506EC612DF3AF6273 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = hermesos;
 			sourceTree = "<group>";
 		};
+		6B660194A4AF85B009FAD7AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C8F5F95B4E9E9F8903F8D0A /* Pods-hermesos.debug.xcconfig */,
+				6AB24153BF2897C2987B4B3B /* Pods-hermesos.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5971F28121190952007D36BC /* Build configuration list for PBXNativeTarget "hermesos" */;
 			buildPhases = (
+				E4BB87C564BA01D99165E8E4 /* [CP] Check Pods Manifest.lock */,
 				5971F26B2119094F007D36BC /* Sources */,
 				5971F26C2119094F007D36BC /* Frameworks */,
 				5971F26D2119094F007D36BC /* Resources */,
+				EA0F5916921582878BBAE8D9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E4BB87C564BA01D99165E8E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-hermesos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA0F5916921582878BBAE8D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-hermesos/Pods-hermesos-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hermesos/Pods-hermesos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5971F26B2119094F007D36BC /* Sources */ = {
@@ -278,6 +347,7 @@
 		};
 		5971F28221190952007D36BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C8F5F95B4E9E9F8903F8D0A /* Pods-hermesos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +365,7 @@
 		};
 		5971F28321190952007D36BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AB24153BF2897C2987B4B3B /* Pods-hermesos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
