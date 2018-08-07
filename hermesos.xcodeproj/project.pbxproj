@@ -21,6 +21,8 @@
 		5971F2942119320D007D36BC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F2932119320D007D36BC /* Extensions.swift */; };
 		5971F29721194AA5007D36BC /* ScheduleSOSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F29621194AA4007D36BC /* ScheduleSOSVC.swift */; };
 		5971F299211976F4007D36BC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F298211976F4007D36BC /* Constants.swift */; };
+		5971F29B211A3AEC007D36BC /* SOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F29A211A3AEC007D36BC /* SOS.swift */; };
+		5971F29D211A3AFF007D36BC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F29C211A3AFF007D36BC /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		5971F2932119320D007D36BC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5971F29621194AA4007D36BC /* ScheduleSOSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleSOSVC.swift; sourceTree = "<group>"; };
 		5971F298211976F4007D36BC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5971F29A211A3AEC007D36BC /* SOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOS.swift; sourceTree = "<group>"; };
+		5971F29C211A3AFF007D36BC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6AB24153BF2897C2987B4B3B /* Pods-hermesos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hermesos.release.xcconfig"; path = "Pods/Target Support Files/Pods-hermesos/Pods-hermesos.release.xcconfig"; sourceTree = "<group>"; };
 		9C8F5F95B4E9E9F8903F8D0A /* Pods-hermesos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hermesos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hermesos/Pods-hermesos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				5971F27E21190952007D36BC /* Info.plist */,
+				5971F29E211A40E8007D36BC /* models */,
 				5971F29521193211007D36BC /* helpers */,
 				5971F29221192A09007D36BC /* base */,
 				5971F290211929D6007D36BC /* controllers */,
@@ -133,6 +138,15 @@
 				5971F298211976F4007D36BC /* Constants.swift */,
 			);
 			path = helpers;
+			sourceTree = "<group>";
+		};
+		5971F29E211A40E8007D36BC /* models */ = {
+			isa = PBXGroup;
+			children = (
+				5971F29A211A3AEC007D36BC /* SOS.swift */,
+				5971F29C211A3AFF007D36BC /* User.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		6B660194A4AF85B009FAD7AA /* Pods */ = {
@@ -263,10 +277,12 @@
 				5971F2872119287C007D36BC /* SplashVC.swift in Sources */,
 				5971F28D2119296B007D36BC /* ProfileVC.swift in Sources */,
 				5971F28B211928E4007D36BC /* CreateAccountVC.swift in Sources */,
+				5971F29B211A3AEC007D36BC /* SOS.swift in Sources */,
 				5971F2942119320D007D36BC /* Extensions.swift in Sources */,
 				5971F28F21192997007D36BC /* SOSListVC.swift in Sources */,
 				5971F299211976F4007D36BC /* Constants.swift in Sources */,
 				5971F285211924C0007D36BC /* DismissSegue.swift in Sources */,
+				5971F29D211A3AFF007D36BC /* User.swift in Sources */,
 				5971F2732119094F007D36BC /* AppDelegate.swift in Sources */,
 				5971F289211928B6007D36BC /* SignInVC.swift in Sources */,
 				5971F29721194AA5007D36BC /* ScheduleSOSVC.swift in Sources */,
