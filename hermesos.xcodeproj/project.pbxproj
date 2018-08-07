@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		539467FCDBD3EB1EF66C8852 /* Pods_hermesos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58196F1AF43EDFEFAFA60B95 /* Pods_hermesos.framework */; };
 		5971F2732119094F007D36BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F2722119094F007D36BC /* AppDelegate.swift */; };
-		5971F2752119094F007D36BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F2742119094F007D36BC /* ViewController.swift */; };
 		5971F2782119094F007D36BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5971F2762119094F007D36BC /* Main.storyboard */; };
 		5971F27A21190952007D36BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5971F27921190952007D36BC /* Assets.xcassets */; };
 		5971F27D21190952007D36BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5971F27B21190952007D36BC /* LaunchScreen.storyboard */; };
 		5971F285211924C0007D36BC /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F284211924C0007D36BC /* DismissSegue.swift */; };
+		5971F2872119287C007D36BC /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F2862119287C007D36BC /* SplashVC.swift */; };
+		5971F289211928B6007D36BC /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F288211928B6007D36BC /* SignInVC.swift */; };
+		5971F28B211928E4007D36BC /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F28A211928E4007D36BC /* CreateAccountVC.swift */; };
+		5971F28D2119296B007D36BC /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F28C2119296B007D36BC /* ProfileVC.swift */; };
+		5971F28F21192997007D36BC /* SOSListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F28E21192997007D36BC /* SOSListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		58196F1AF43EDFEFAFA60B95 /* Pods_hermesos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hermesos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5971F26F2119094F007D36BC /* hermesos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hermesos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5971F2722119094F007D36BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5971F2742119094F007D36BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5971F2772119094F007D36BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5971F27921190952007D36BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5971F27C21190952007D36BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5971F27E21190952007D36BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5971F284211924C0007D36BC /* DismissSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
+		5971F2862119287C007D36BC /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		5971F288211928B6007D36BC /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		5971F28A211928E4007D36BC /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		5971F28C2119296B007D36BC /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		5971F28E21192997007D36BC /* SOSListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOSListVC.swift; sourceTree = "<group>"; };
 		6AB24153BF2897C2987B4B3B /* Pods-hermesos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hermesos.release.xcconfig"; path = "Pods/Target Support Files/Pods-hermesos/Pods-hermesos.release.xcconfig"; sourceTree = "<group>"; };
 		9C8F5F95B4E9E9F8903F8D0A /* Pods-hermesos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hermesos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hermesos/Pods-hermesos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,15 +79,43 @@
 		5971F2712119094F007D36BC /* hermesos */ = {
 			isa = PBXGroup;
 			children = (
-				5971F2722119094F007D36BC /* AppDelegate.swift */,
-				5971F2742119094F007D36BC /* ViewController.swift */,
-				5971F2762119094F007D36BC /* Main.storyboard */,
-				5971F284211924C0007D36BC /* DismissSegue.swift */,
-				5971F27921190952007D36BC /* Assets.xcassets */,
-				5971F27B21190952007D36BC /* LaunchScreen.storyboard */,
 				5971F27E21190952007D36BC /* Info.plist */,
+				5971F29221192A09007D36BC /* base */,
+				5971F290211929D6007D36BC /* controllers */,
+				5971F291211929FB007D36BC /* views */,
 			);
 			path = hermesos;
+			sourceTree = "<group>";
+		};
+		5971F290211929D6007D36BC /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5971F2862119287C007D36BC /* SplashVC.swift */,
+				5971F288211928B6007D36BC /* SignInVC.swift */,
+				5971F28A211928E4007D36BC /* CreateAccountVC.swift */,
+				5971F28C2119296B007D36BC /* ProfileVC.swift */,
+				5971F28E21192997007D36BC /* SOSListVC.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		5971F291211929FB007D36BC /* views */ = {
+			isa = PBXGroup;
+			children = (
+				5971F2762119094F007D36BC /* Main.storyboard */,
+				5971F284211924C0007D36BC /* DismissSegue.swift */,
+				5971F27B21190952007D36BC /* LaunchScreen.storyboard */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		5971F29221192A09007D36BC /* base */ = {
+			isa = PBXGroup;
+			children = (
+				5971F2722119094F007D36BC /* AppDelegate.swift */,
+				5971F27921190952007D36BC /* Assets.xcassets */,
+			);
+			path = base;
 			sourceTree = "<group>";
 		};
 		6B660194A4AF85B009FAD7AA /* Pods */ = {
@@ -207,9 +243,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5971F2752119094F007D36BC /* ViewController.swift in Sources */,
+				5971F2872119287C007D36BC /* SplashVC.swift in Sources */,
+				5971F28D2119296B007D36BC /* ProfileVC.swift in Sources */,
+				5971F28B211928E4007D36BC /* CreateAccountVC.swift in Sources */,
+				5971F28F21192997007D36BC /* SOSListVC.swift in Sources */,
 				5971F285211924C0007D36BC /* DismissSegue.swift in Sources */,
 				5971F2732119094F007D36BC /* AppDelegate.swift in Sources */,
+				5971F289211928B6007D36BC /* SignInVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

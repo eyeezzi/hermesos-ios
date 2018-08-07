@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Splash-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hermesos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Splash" id="BYZ-38-t0r" customClass="SplashVC" customModule="hermesos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,11 +53,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-31" y="45"/>
         </scene>
-        <!--Item 2-->
+        <!--Profile-->
         <scene sceneID="ewf-XR-5WF">
             <objects>
-                <viewController id="vEE-44-5sL" sceneMemberID="viewController">
+                <viewController title="Profile" id="vEE-44-5sL" customClass="ProfileVC" customModule="hermesos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5T3-j9-t8w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,10 +84,10 @@
             </objects>
             <point key="canvasLocation" x="1089" y="1104"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign In-->
         <scene sceneID="VeN-gI-7QD">
             <objects>
-                <viewController id="o5u-9G-UAh" sceneMemberID="viewController">
+                <viewController title="Sign In" id="o5u-9G-UAh" customClass="SignInVC" customModule="hermesos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ChH-io-kny">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,10 +156,10 @@
             </objects>
             <point key="canvasLocation" x="2028" y="-382.75862068965517"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Account-->
         <scene sceneID="bm3-vF-uWF">
             <objects>
-                <viewController id="Js7-lX-fu7" sceneMemberID="viewController">
+                <viewController title="Create Account" id="Js7-lX-fu7" customClass="CreateAccountVC" customModule="hermesos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BgJ-JL-y25">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -226,10 +227,10 @@
             </objects>
             <point key="canvasLocation" x="2938" y="-383"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Dashboard-->
         <scene sceneID="K0f-5P-YeF">
             <objects>
-                <tabBarController id="AEw-1v-dqf" sceneMemberID="viewController">
+                <tabBarController title="Dashboard" id="AEw-1v-dqf" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c9y-yV-1g9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -244,10 +245,10 @@
             </objects>
             <point key="canvasLocation" x="1089" y="322"/>
         </scene>
-        <!--Item-->
+        <!--SOS List-->
         <scene sceneID="rcx-qu-QT4">
             <objects>
-                <tableViewController id="X4I-tV-fVp" sceneMemberID="viewController">
+                <tableViewController title="SOS List" id="X4I-tV-fVp" customClass="SOSListVC" customModule="hermesos" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qbS-et-421">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -273,10 +274,10 @@
             </objects>
             <point key="canvasLocation" x="2028" y="322"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Authentication-->
         <scene sceneID="CMI-4s-fVl">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="S6q-dV-1wu" sceneMemberID="viewController">
+                <navigationController title="Authentication" automaticallyAdjustsScrollViewInsets="NO" id="S6q-dV-1wu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kY6-So-JBO">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -293,6 +294,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ril-y7-uMH"/>
+        <segue reference="bgi-bn-l4H"/>
     </inferredMetricsTieBreakers>
 </document>
