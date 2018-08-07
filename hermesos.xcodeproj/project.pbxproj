@@ -20,6 +20,7 @@
 		5971F28F21192997007D36BC /* SOSListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F28E21192997007D36BC /* SOSListVC.swift */; };
 		5971F2942119320D007D36BC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F2932119320D007D36BC /* Extensions.swift */; };
 		5971F29721194AA5007D36BC /* ScheduleSOSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F29621194AA4007D36BC /* ScheduleSOSVC.swift */; };
+		5971F299211976F4007D36BC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F298211976F4007D36BC /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		5971F28E21192997007D36BC /* SOSListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOSListVC.swift; sourceTree = "<group>"; };
 		5971F2932119320D007D36BC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5971F29621194AA4007D36BC /* ScheduleSOSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleSOSVC.swift; sourceTree = "<group>"; };
+		5971F298211976F4007D36BC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6AB24153BF2897C2987B4B3B /* Pods-hermesos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hermesos.release.xcconfig"; path = "Pods/Target Support Files/Pods-hermesos/Pods-hermesos.release.xcconfig"; sourceTree = "<group>"; };
 		9C8F5F95B4E9E9F8903F8D0A /* Pods-hermesos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hermesos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hermesos/Pods-hermesos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				5971F2932119320D007D36BC /* Extensions.swift */,
+				5971F298211976F4007D36BC /* Constants.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				5971F28B211928E4007D36BC /* CreateAccountVC.swift in Sources */,
 				5971F2942119320D007D36BC /* Extensions.swift in Sources */,
 				5971F28F21192997007D36BC /* SOSListVC.swift in Sources */,
+				5971F299211976F4007D36BC /* Constants.swift in Sources */,
 				5971F285211924C0007D36BC /* DismissSegue.swift in Sources */,
 				5971F2732119094F007D36BC /* AppDelegate.swift in Sources */,
 				5971F289211928B6007D36BC /* SignInVC.swift in Sources */,
