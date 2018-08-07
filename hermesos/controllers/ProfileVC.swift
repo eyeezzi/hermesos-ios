@@ -17,5 +17,9 @@ class ProfileVC : UIViewController {
         UserDefaults.standard.deleteToken()
         performSegue(withIdentifier: "dismissProfile", sender: nil)
     }
+    @IBAction func deleteAccount(_ sender: Any) {
+        // todo: make network call
+        performSegue(withIdentifier: "dismissProfile", sender: nil)
+    }
 }
 

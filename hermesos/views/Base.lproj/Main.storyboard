@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -46,22 +47,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJg-zx-bC7">
-                                <rect key="frame" x="159" y="467" width="57" height="30"/>
-                                <state key="normal" title="Sign out"/>
-                                <connections>
-                                    <action selector="signOut:" destination="vEE-44-5sL" eventType="touchUpInside" id="U40-xd-j8c"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="SyF-Dq-14f">
+                                <rect key="frame" x="24" y="157" width="327" height="353"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Srb-MJ-AhZ">
+                                        <rect key="frame" x="88.5" y="0.0" width="150" height="223"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phy-dS-Htg">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lih-wf-cDR">
+                                                        <rect key="frame" x="26.5" y="50.5" width="98.5" height="50.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="Lih-wf-cDR" firstAttribute="centerX" secondItem="phy-dS-Htg" secondAttribute="centerX" id="3WR-B7-23h"/>
+                                                    <constraint firstAttribute="width" constant="150" id="89a-T2-R8r"/>
+                                                    <constraint firstItem="Lih-wf-cDR" firstAttribute="centerY" secondItem="phy-dS-Htg" secondAttribute="centerY" id="L7x-Rc-dKe"/>
+                                                    <constraint firstAttribute="width" secondItem="phy-dS-Htg" secondAttribute="height" multiplier="1:1" id="yhM-sz-KFG"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7G-eC-5wP">
+                                                <rect key="frame" x="54" y="166" width="42" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJp-ES-ael">
+                                                <rect key="frame" x="54" y="202.5" width="42" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJg-zx-bC7">
+                                        <rect key="frame" x="111" y="323" width="105" height="30"/>
+                                        <state key="normal" title="Delete Account">
+                                            <color key="titleColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="deleteAccount:" destination="vEE-44-5sL" eventType="touchUpInside" id="qJ9-t9-yoZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="PXF-it-cF5" firstAttribute="bottom" secondItem="zJg-zx-bC7" secondAttribute="bottom" constant="121" id="WZd-ZG-bPA"/>
-                            <constraint firstItem="zJg-zx-bC7" firstAttribute="centerX" secondItem="5T3-j9-t8w" secondAttribute="centerX" id="v3b-1b-sCS"/>
+                            <constraint firstItem="SyF-Dq-14f" firstAttribute="centerY" secondItem="5T3-j9-t8w" secondAttribute="centerY" id="TdO-G4-7oI"/>
+                            <constraint firstItem="SyF-Dq-14f" firstAttribute="leading" secondItem="5T3-j9-t8w" secondAttribute="leading" constant="24" id="nUG-AU-dOh"/>
+                            <constraint firstItem="PXF-it-cF5" firstAttribute="trailing" secondItem="SyF-Dq-14f" secondAttribute="trailing" constant="24" id="qNy-mo-8qh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PXF-it-cF5"/>
                     </view>
-                    <navigationItem key="navigationItem" id="uJd-pT-MMW"/>
+                    <navigationItem key="navigationItem" title="Profile" id="uJd-pT-MMW">
+                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="hhg-bF-0Rp">
+                            <connections>
+                                <action selector="signOut:" destination="vEE-44-5sL" id="eoi-eZ-h5G"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="custom" identifier="dismissProfile" customClass="DismissSegue" customModule="hermesos" customModuleProvider="target" id="11O-Gs-1yc"/>
                     </connections>
@@ -263,7 +313,7 @@
                             <outlet property="delegate" destination="w6m-dV-lfc" id="JpS-LD-r3B"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="IRB-Dd-gvm">
+                    <navigationItem key="navigationItem" title="Scheduled SOS" id="IRB-Dd-gvm">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Zxc-6I-Vbe">
                             <connections>
                                 <action selector="openSOSCreationForm:" destination="w6m-dV-lfc" id="aRe-PJ-2RW"/>
@@ -359,11 +409,11 @@
             </objects>
             <point key="canvasLocation" x="3658" y="1136"/>
         </scene>
-        <!--Item-->
+        <!--Scehduled SOS-->
         <scene sceneID="8Hz-26-tM2">
             <objects>
                 <navigationController id="xwO-Mg-zVW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="4ET-w7-JLh"/>
+                    <tabBarItem key="tabBarItem" title="Scehduled SOS" id="4ET-w7-JLh"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ldh-3W-gzm">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -394,11 +444,11 @@
             </objects>
             <point key="canvasLocation" x="1089" y="-382"/>
         </scene>
-        <!--Item 2-->
+        <!--Profile-->
         <scene sceneID="Q1y-Z4-595">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jyf-YW-Eh7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="802-c0-2fd"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="802-c0-2fd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZgV-dD-WdL">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -433,7 +483,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yG4-6m-QEp"/>
+        <segue reference="Ta6-pv-c9O"/>
         <segue reference="11O-Gs-1yc"/>
     </inferredMetricsTieBreakers>
 </document>
