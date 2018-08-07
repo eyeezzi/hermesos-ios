@@ -11,7 +11,6 @@ import UIKit
 class SplashVC : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserDefaults.standard.saveToken(value: "test-token")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -24,7 +23,7 @@ class SplashVC : UIViewController {
             performSegue(withIdentifier: "gotoLogin", sender: nil)
             return
         }
-        
+        // todo: GET /me to verify token validity
         performSegue(withIdentifier: "gotoDashboard", sender: nil)
     }
 }
