@@ -11,11 +11,20 @@ import UIKit
 class SplashVC : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        UserDefaults.standard.saveToken(value: "test-token")
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        decidePath()
+    }
+    
+    fileprivate func decidePath() {
+        guard let _ = UserDefaults.standard.getToken() else {
+            performSegue(withIdentifier: "gotoLogin", sender: nil)
+            return
+        }
+        
+        performSegue(withIdentifier: "gotoDashboard", sender: nil)
     }
 }

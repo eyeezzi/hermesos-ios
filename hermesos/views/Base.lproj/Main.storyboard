@@ -21,35 +21,18 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="x5j-6I-r2V">
                                 <rect key="frame" x="177" y="323" width="20" height="20"/>
                             </activityIndicatorView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="WFk-UB-lAu">
-                                <rect key="frame" x="150" y="384" width="75" height="76"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHu-aC-PAX">
-                                        <rect key="frame" x="14" y="0.0" width="47" height="30"/>
-                                        <state key="normal" title="Sign in"/>
-                                        <connections>
-                                            <segue destination="S6q-dV-1wu" kind="presentation" id="vlI-OF-TVF"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZjK-35-knq">
-                                        <rect key="frame" x="0.0" y="46" width="75" height="30"/>
-                                        <state key="normal" title="Dashboard"/>
-                                        <connections>
-                                            <segue destination="AEw-1v-dqf" kind="presentation" id="C6O-z3-vjD"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="x5j-6I-r2V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gon-m7-1ZF"/>
-                            <constraint firstItem="WFk-UB-lAu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HYB-Se-m2K"/>
-                            <constraint firstItem="WFk-UB-lAu" firstAttribute="top" secondItem="x5j-6I-r2V" secondAttribute="bottom" constant="41" id="WSq-Hf-fw7"/>
                             <constraint firstItem="x5j-6I-r2V" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gJK-N6-FkH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="S6q-dV-1wu" kind="presentation" identifier="gotoLogin" id="Dc1-Hq-FGT"/>
+                        <segue destination="AEw-1v-dqf" kind="presentation" identifier="gotoDashboard" id="uRX-UC-KFs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -67,7 +50,7 @@
                                 <rect key="frame" x="159" y="467" width="57" height="30"/>
                                 <state key="normal" title="Sign out"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="custom" customClass="DismissSegue" customModule="hermesos" customModuleProvider="target" id="Ril-y7-uMH"/>
+                                    <action selector="signOut:" destination="vEE-44-5sL" eventType="touchUpInside" id="U40-xd-j8c"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -79,6 +62,9 @@
                         <viewLayoutGuide key="safeArea" id="PXF-it-cF5"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="802-c0-2fd"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="custom" identifier="dismissProfile" customClass="DismissSegue" customModule="hermesos" customModuleProvider="target" id="11O-Gs-1yc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G6b-AD-xod" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -126,6 +112,9 @@
                                             <constraint firstAttribute="height" constant="45" id="5MI-K2-VXV"/>
                                         </constraints>
                                         <state key="normal" title="Sign in"/>
+                                        <connections>
+                                            <action selector="signIn:" destination="o5u-9G-UAh" eventType="touchUpInside" id="USm-Du-e8M"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -151,6 +140,9 @@
                         <viewLayoutGuide key="safeArea" id="z3q-iH-c9V"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ek8-3w-p4k"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="custom" identifier="dismissSignIn" customClass="DismissSegue" customModule="hermesos" customModuleProvider="target" id="7EY-lU-r9y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oh2-dD-Sgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -208,7 +200,7 @@
                                         </constraints>
                                         <state key="normal" title="Create Account"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="custom" customClass="DismissSegue" customModule="hermesos" customModuleProvider="target" id="bgi-bn-l4H"/>
+                                            <action selector="createAccount:" destination="Js7-lX-fu7" eventType="touchUpInside" id="V4M-Y2-YH8"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -222,6 +214,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="emn-Bk-vnC"/>
                     </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="custom" identifier="dismissCreateAccount" customClass="DismissSegue" customModule="hermesos" customModuleProvider="target" id="xGV-S7-XDz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFC-Gn-pTN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -294,6 +289,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bgi-bn-l4H"/>
+        <segue reference="xGV-S7-XDz"/>
     </inferredMetricsTieBreakers>
 </document>

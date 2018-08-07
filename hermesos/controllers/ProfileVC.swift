@@ -11,12 +11,11 @@ import UIKit
 class ProfileVC : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func signOut(_ sender: Any) {
+        UserDefaults.standard.deleteToken()
+        performSegue(withIdentifier: "dismissProfile", sender: nil)
     }
 }
 
