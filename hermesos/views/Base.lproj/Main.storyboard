@@ -407,7 +407,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZEx-yv-uiG">
                                 <rect key="frame" x="24" y="129" width="327" height="473"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j7R-yl-6ym">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j7R-yl-6ym">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="UMD-fT-QTv"/>
@@ -416,7 +416,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LRc-w5-CIT">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="To Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LRc-w5-CIT">
                                         <rect key="frame" x="0.0" y="53" width="327" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="krt-o4-i1R"/>
@@ -425,20 +425,19 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xrh-Lo-wAf">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Message" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xrh-Lo-wAf">
                                         <rect key="frame" x="0.0" y="106" width="327" height="90"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="90" id="3gt-lV-tZ6"/>
                                         </constraints>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="YWk-hj-EWA">
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWk-hj-EWA">
                                         <rect key="frame" x="0.0" y="204" width="327" height="216"/>
-                                        <date key="date" timeIntervalSinceReferenceDate="555309383.21886897">
-                                            <!--2018-08-07 04:36:23 +0000-->
+                                        <date key="date" timeIntervalSinceReferenceDate="555309360.21886897">
+                                            <!--2018-08-07 04:36:00 +0000-->
                                         </date>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfD-Ri-hbu">
@@ -470,6 +469,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="message" destination="xrh-Lo-wAf" id="Qut-SW-TNK"/>
+                        <outlet property="name" destination="j7R-yl-6ym" id="4Rl-yJ-jZh"/>
+                        <outlet property="phone" destination="LRc-w5-CIT" id="XPY-Ac-12z"/>
+                        <outlet property="time" destination="YWk-hj-EWA" id="ww8-J6-vEd"/>
                         <segue destination="w6m-dV-lfc" kind="custom" identifier="dismissScheduleSOS" customClass="DismissSegue" customModule="hermesos" customModuleProvider="target" id="yG4-6m-QEp"/>
                     </connections>
                 </viewController>
@@ -551,7 +554,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Ta6-pv-c9O"/>
+        <segue reference="yG4-6m-QEp"/>
         <segue reference="xGV-S7-XDz"/>
     </inferredMetricsTieBreakers>
 </document>
