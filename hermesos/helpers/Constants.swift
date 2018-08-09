@@ -20,8 +20,8 @@ struct Endpoints {
     // GET: list all SOS for user
     // POST: schedule an SOS
     // DELETE: /id to delete a scheduled SOS
-    static let SOS = "/sos"
+    static let SOS = BASE + "/api/sos"
     
     // GET: /id for user profile
-    static let USER = "/users"
+    static let USER = BASE + "api/users"
 }

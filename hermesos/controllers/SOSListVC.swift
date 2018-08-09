@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
+import SVProgressHUD
 
 class SOSListVC : UITableViewController {
     override func viewDidLoad() {
@@ -18,6 +21,23 @@ class SOSListVC : UITableViewController {
         // todo: make network call
         // save result & reload table
         // handle errors
+        let headers: HTTPHeaders = [
+            "x-access-token": UserDefaults.standard.getToken() ?? ""
+        ]
+
+        Alamofire.request(Endpoints.SOS, method: .get, headers: headers)
+            .validate()
+            .responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    let json = JSON(value)
+                    print(json)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    guard let data = response.data else { return }
+                    print(JSON(data))
+                }
+        }
     }
     
     @IBAction func openSOSCreationForm(_ sender: Any) {
