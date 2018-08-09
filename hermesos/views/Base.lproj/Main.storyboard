@@ -131,7 +131,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lSC-0f-pnH">
                                 <rect key="frame" x="24" y="231.5" width="327" height="204"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xnq-JO-sNL">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xnq-JO-sNL">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="kvh-9e-ONA"/>
@@ -146,8 +146,11 @@
                                             <constraint firstAttribute="height" constant="45" id="bnC-1v-7K2"/>
                                         </constraints>
                                         <state key="normal" title="Request SMS"/>
+                                        <connections>
+                                            <action selector="requestSMS:" destination="o5u-9G-UAh" eventType="touchUpInside" id="Cni-tR-lWV"/>
+                                        </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nyB-Hk-BRp">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verification Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nyB-Hk-BRp">
                                         <rect key="frame" x="0.0" y="106" width="327" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="hcP-tX-0sg"/>
@@ -191,6 +194,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ek8-3w-p4k"/>
                     <connections>
+                        <outlet property="phoneNumber" destination="xnq-JO-sNL" id="5zt-gM-ozR"/>
+                        <outlet property="verificationCode" destination="nyB-Hk-BRp" id="LOK-0Q-eST"/>
                         <segue destination="BYZ-38-t0r" kind="custom" identifier="dismissSignIn" customClass="DismissSegue" customModule="hermesos" customModuleProvider="target" id="7EY-lU-r9y"/>
                     </connections>
                 </viewController>
@@ -209,7 +214,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="agn-7M-1Hf">
                                 <rect key="frame" x="24" y="205" width="327" height="257"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U8O-dA-ZR9">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U8O-dA-ZR9">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="cFQ-H1-HuI"/>
@@ -218,7 +223,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hde-ft-6B6">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hde-ft-6B6">
                                         <rect key="frame" x="0.0" y="53" width="327" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="fdt-Kn-53n"/>
@@ -233,8 +238,11 @@
                                             <constraint firstAttribute="height" constant="45" id="zsI-rH-9Tb"/>
                                         </constraints>
                                         <state key="normal" title="Request SMS"/>
+                                        <connections>
+                                            <action selector="doRequestSMS:" destination="Js7-lX-fu7" eventType="touchUpInside" id="LhB-xS-pz7"/>
+                                        </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mt6-eP-Tff">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verification Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mt6-eP-Tff">
                                         <rect key="frame" x="0.0" y="159" width="327" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="70y-VT-jLw"/>
@@ -265,6 +273,11 @@
                         <viewLayoutGuide key="safeArea" id="emn-Bk-vnC"/>
                     </view>
                     <connections>
+                        <outlet property="createBtn" destination="L9C-8H-HHP" id="sQg-fX-7fo"/>
+                        <outlet property="name" destination="U8O-dA-ZR9" id="JoW-9l-MDJ"/>
+                        <outlet property="phoneNumber" destination="hde-ft-6B6" id="M4z-Jr-Ig3"/>
+                        <outlet property="requestBtn" destination="cGU-fe-Ok3" id="vre-1k-OpN"/>
+                        <outlet property="verificationCode" destination="mt6-eP-Tff" id="kh4-cQ-uSM"/>
                         <segue destination="BYZ-38-t0r" kind="custom" identifier="dismissCreateAccount" customClass="DismissSegue" customModule="hermesos" customModuleProvider="target" id="xGV-S7-XDz"/>
                     </connections>
                 </viewController>
@@ -539,6 +552,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Ta6-pv-c9O"/>
-        <segue reference="11O-Gs-1yc"/>
+        <segue reference="xGV-S7-XDz"/>
     </inferredMetricsTieBreakers>
 </document>
