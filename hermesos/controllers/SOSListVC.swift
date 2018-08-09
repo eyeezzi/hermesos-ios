@@ -16,6 +16,9 @@ class SOSListVC : UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         fetchSOS()
     }
     
@@ -49,8 +52,53 @@ extension SOSListVC {
         return sosList.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SOSCell", for: indexPath)
-        // todo: customize cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SOSCell", for: indexPath) as! SOSCell
+        cell.sos = sosList[indexPath.row]
+        cell.delegate = self
         return cell;
+    }
+}
+
+extension SOSListVC: SOSCellDelegate {
+    /* @deprecated
+    func deleteCell(_ cell: SOSCell) {
+        let alertController = UIAlertController(title: "Delete SOS", message: "Are you sure about this?", preferredStyle: .alert)
+
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+
+        let delete = UIAlertAction(title: "Delete", style: .destructive, handler: {
+            (action) in
+            print("todo: delete from database and table")
+        })
+
+        alertController.addAction(delete)
+        alertController.addAction(cancel)
+
+        self.present(alertController, animated: true, completion: nil)
+    }
+    */
+    func deleteCell(_ cell: SOSCell) {
+        guard
+            let sos = cell.sos,
+            let indexPath = tableView.indexPath(for: cell) else { return }
+        
+        let headers: HTTPHeaders = [
+            "x-access-token": UserDefaults.standard.getToken() ?? ""
+        ]
+        
+        let endpoint = Endpoints.SOS + "/" + sos.id
+        Alamofire.request(endpoint, method: .delete, headers: headers)
+            .validate()
+            .responseJSON { response in
+                switch response.result {
+                case .success(_):
+                    self.sosList.remove(at: indexPath.row)
+                    self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    guard let data = response.data else { return }
+                    print(JSON(data))
+                }
+        }
     }
 }

@@ -23,6 +23,7 @@
 		5971F299211976F4007D36BC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F298211976F4007D36BC /* Constants.swift */; };
 		5971F29B211A3AEC007D36BC /* SOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F29A211A3AEC007D36BC /* SOS.swift */; };
 		5971F29D211A3AFF007D36BC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F29C211A3AFF007D36BC /* User.swift */; };
+		59D2681A211CF5010052838C /* SOSCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D26819211CF5010052838C /* SOSCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		5971F298211976F4007D36BC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5971F29A211A3AEC007D36BC /* SOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOS.swift; sourceTree = "<group>"; };
 		5971F29C211A3AFF007D36BC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		59D26819211CF5010052838C /* SOSCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOSCell.swift; sourceTree = "<group>"; };
 		6AB24153BF2897C2987B4B3B /* Pods-hermesos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hermesos.release.xcconfig"; path = "Pods/Target Support Files/Pods-hermesos/Pods-hermesos.release.xcconfig"; sourceTree = "<group>"; };
 		9C8F5F95B4E9E9F8903F8D0A /* Pods-hermesos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hermesos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hermesos/Pods-hermesos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +117,7 @@
 		5971F291211929FB007D36BC /* views */ = {
 			isa = PBXGroup;
 			children = (
+				59D26819211CF5010052838C /* SOSCell.swift */,
 				5971F2762119094F007D36BC /* Main.storyboard */,
 				5971F284211924C0007D36BC /* DismissSegue.swift */,
 				5971F27B21190952007D36BC /* LaunchScreen.storyboard */,
@@ -281,6 +284,7 @@
 				5971F2942119320D007D36BC /* Extensions.swift in Sources */,
 				5971F28F21192997007D36BC /* SOSListVC.swift in Sources */,
 				5971F299211976F4007D36BC /* Constants.swift in Sources */,
+				59D2681A211CF5010052838C /* SOSCell.swift in Sources */,
 				5971F285211924C0007D36BC /* DismissSegue.swift in Sources */,
 				5971F29D211A3AFF007D36BC /* User.swift in Sources */,
 				5971F2732119094F007D36BC /* AppDelegate.swift in Sources */,
