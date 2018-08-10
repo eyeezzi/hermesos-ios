@@ -15,6 +15,12 @@ Schedule an SMS to your friend if you feel unsafe.
 	pod install
 	[open .xcworkspace file]
 	
+## Requirements
+
+### Use Cases
+
+![](docs/hermesos-use-case.svg)
+	
 ## Architecture
 
 ### System
