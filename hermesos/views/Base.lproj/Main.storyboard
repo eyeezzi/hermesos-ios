@@ -206,7 +206,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="z3q-iH-c9V"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ek8-3w-p4k"/>
+                    <navigationItem key="navigationItem" title="Sign In" id="Ek8-3w-p4k"/>
                     <connections>
                         <outlet property="phoneNumber" destination="xnq-JO-sNL" id="5zt-gM-ozR"/>
                         <outlet property="verificationCode" destination="nyB-Hk-BRp" id="LOK-0Q-eST"/>
@@ -507,7 +507,7 @@
         <scene sceneID="8Hz-26-tM2">
             <objects>
                 <navigationController id="xwO-Mg-zVW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Scehduled SOS" id="4ET-w7-JLh"/>
+                    <tabBarItem key="tabBarItem" title="Scehduled SOS" image="clock-7" selectedImage="clock-7" id="4ET-w7-JLh"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ldh-3W-gzm">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -542,7 +542,7 @@
         <scene sceneID="Q1y-Z4-595">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jyf-YW-Eh7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="802-c0-2fd"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="spanner-7" selectedImage="spanner-7" id="802-c0-2fd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZgV-dD-WdL">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -576,9 +576,12 @@
             <point key="canvasLocation" x="2857" y="1136"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="clock-7" width="30" height="30"/>
+        <image name="spanner-7" width="30" height="30"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wIS-Hq-j2h"/>
-        <segue reference="yG4-6m-QEp"/>
-        <segue reference="11O-Gs-1yc"/>
+        <segue reference="Ta6-pv-c9O"/>
+        <segue reference="7EY-lU-r9y"/>
     </inferredMetricsTieBreakers>
 </document>
