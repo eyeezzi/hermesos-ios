@@ -23,5 +23,5 @@ struct Endpoints {
     static let SOS = BASE + "/api/sos"
     
     // GET: /id for user profile
-    static let USER = BASE + "api/users"
+    static let PROFILE = BASE + "/api/me"
 }

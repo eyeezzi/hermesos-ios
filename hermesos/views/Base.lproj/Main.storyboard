@@ -113,6 +113,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="name" destination="Z7G-eC-5wP" id="7O3-FO-bSm"/>
+                        <outlet property="phoneNumber" destination="VJp-ES-ael" id="lkr-oT-3qL"/>
+                        <outlet property="smsRemaining" destination="Lih-wf-cDR" id="GmW-k1-2Nl"/>
                         <segue destination="BYZ-38-t0r" kind="custom" identifier="dismissProfile" customClass="DismissSegue" customModule="hermesos" customModuleProvider="target" id="11O-Gs-1yc"/>
                     </connections>
                 </viewController>
@@ -565,6 +568,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="wIS-Hq-j2h"/>
         <segue reference="yG4-6m-QEp"/>
-        <segue reference="xGV-S7-XDz"/>
+        <segue reference="11O-Gs-1yc"/>
     </inferredMetricsTieBreakers>
 </document>
