@@ -7,7 +7,7 @@
 //
 
 struct Endpoints {
-    static let BASE = "http://localhost:3000"
+    static let BASE = "https://hermesos.herokuapp.com"
     
     static let SIGNUP_REQUEST_SMS = BASE + "/auth/sign_up/request_sms" // POST
     static let SIGNUP_VERIFY_CODE = BASE + "/auth/sign_up/verify_code" // POST
