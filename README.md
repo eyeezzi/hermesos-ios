@@ -15,10 +15,17 @@ Schedule an SMS to your friend if you feel unsafe.
 	pod install
 	[open .xcworkspace file]
 	
-## Scope Assumptions
+## Architecture
 
-1. This app is primarily a client that communicates with the backend server over a REST API.
-2. Entities: ![](docs/hermesos-erd.svg) 
+### System
+
+This app is primarily a client that communicates with the backend server over a REST API.
+
+![](docs/hermesos-system-diagram.svg) 
+
+### Entities
+
+![](docs/hermesos-erd.svg) 
 
 ## Known Limitations
 
