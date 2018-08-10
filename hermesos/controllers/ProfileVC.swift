@@ -23,12 +23,14 @@ class ProfileVC : UIViewController {
         super.viewDidLoad()
         fetchProfile()
     }
+    
     func refereshUI() {
         guard let user = user else { return }
         smsRemaining.text = String(user.sms_remaining)
         name.text = user.name
         phoneNumber.text = user.phone_number
     }
+    
     func fetchProfile() {
         let headers: HTTPHeaders = [
             "x-access-token": UserDefaults.standard.getToken() ?? ""
@@ -53,10 +55,27 @@ class ProfileVC : UIViewController {
         UserDefaults.standard.deleteToken()
         performSegue(withIdentifier: "dismissProfile", sender: nil)
     }
+    
     @IBAction func deleteAccount(_ sender: Any) {
-        // todo: DELETE /me
-        UserDefaults.standard.deleteToken()
-        performSegue(withIdentifier: "dismissProfile", sender: nil)
+        let headers: HTTPHeaders = [
+            "x-access-token": UserDefaults.standard.getToken() ?? ""
+        ]
+        
+        Alamofire.request(Endpoints.PROFILE, method: .delete, headers: headers)
+            .validate()
+            .responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    let json = JSON(value)
+                    print(json)
+                    UserDefaults.standard.deleteToken()
+                    self.performSegue(withIdentifier: "dismissProfile", sender: nil)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    guard let data = response.data else { return }
+                    print(JSON(data))
+                }
+            }
     }
 }
 

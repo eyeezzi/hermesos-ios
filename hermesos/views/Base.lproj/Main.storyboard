@@ -56,18 +56,29 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phy-dS-Htg">
                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lih-wf-cDR">
-                                                        <rect key="frame" x="26.5" y="50.5" width="98.5" height="50.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cON-WX-YEB">
+                                                        <rect key="frame" x="26" y="39.5" width="98.5" height="71"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lih-wf-cDR">
+                                                                <rect key="frame" x="0.0" y="0.0" width="98.5" height="50.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJK-gG-Rxh">
+                                                                <rect key="frame" x="9.5" y="50.5" width="80" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="Lih-wf-cDR" firstAttribute="centerX" secondItem="phy-dS-Htg" secondAttribute="centerX" id="3WR-B7-23h"/>
                                                     <constraint firstAttribute="width" constant="150" id="89a-T2-R8r"/>
-                                                    <constraint firstItem="Lih-wf-cDR" firstAttribute="centerY" secondItem="phy-dS-Htg" secondAttribute="centerY" id="L7x-Rc-dKe"/>
+                                                    <constraint firstItem="cON-WX-YEB" firstAttribute="centerX" secondItem="phy-dS-Htg" secondAttribute="centerX" id="GFA-Vb-KYU"/>
+                                                    <constraint firstItem="cON-WX-YEB" firstAttribute="centerY" secondItem="phy-dS-Htg" secondAttribute="centerY" id="WN7-9M-Me6"/>
                                                     <constraint firstAttribute="width" secondItem="phy-dS-Htg" secondAttribute="height" multiplier="1:1" id="yhM-sz-KFG"/>
                                                 </constraints>
                                             </view>
