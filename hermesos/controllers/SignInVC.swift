@@ -25,6 +25,13 @@ class SignInVC : UIViewController {
             return
         }
         
+        // Ensure phone # matches the E.164 format, like +1 6041234567.
+        let PHONE_REGEX = "^\\+?[1-9]\\d{1,14}$"
+        if phoneNumber.range(of: PHONE_REGEX, options: .regularExpression, range: nil, locale: nil) == nil {
+            print("Invalid phone number. Please provide something like +16041234567")
+            return
+        }
+        
         requestSM(phoneNumber: phoneNumber, countryCode: 1)
     }
     

@@ -30,6 +30,7 @@ extension SOS {
             debugPrint("Error parsing SOS json")
             return nil
         }
+//        let _message = json["message"].string,
         
         // Workaround for ISO8601DateFormatter not supporting fractional secconds.
         let trimmedIsoString = _dt.replacingOccurrences(of: "\\.\\d+", with: "", options: .regularExpression)
