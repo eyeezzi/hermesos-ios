@@ -21,14 +21,7 @@ class SignInVC : UIViewController {
     }
     
     @IBAction func requestSMS(_ sender: Any) {
-        guard let phoneNumber = phoneNumber.text else {
-            return
-        }
-        
-        // Ensure phone # matches the E.164 format, like +1 6041234567.
-        let PHONE_REGEX = "^\\+?[1-9]\\d{1,14}$"
-        if phoneNumber.range(of: PHONE_REGEX, options: .regularExpression, range: nil, locale: nil) == nil {
-            print("Invalid phone number. Please provide something like +16041234567")
+        guard let phoneNumber = phoneNumber.text, phoneNumber.isPhoneNumber() else {
             return
         }
         

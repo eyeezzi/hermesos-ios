@@ -36,7 +36,7 @@ class CreateAccountVC : UIViewController {
     @IBAction func doRequestSMS(_ sender: Any) {
         guard
             let name = name.text,
-            let phoneNumber = phoneNumber.text else {
+            let phoneNumber = phoneNumber.text, phoneNumber.isPhoneNumber() else {
                 return
         }
         requestSMS(name: name, phoneNumber: phoneNumber, countryCode: 1)

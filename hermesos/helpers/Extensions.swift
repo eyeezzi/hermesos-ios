@@ -26,3 +26,10 @@ extension UserDefaults {
         removeObject(forKey: UserDefaultsKeys.ACCESS_TOKEN.rawValue)
     }
 }
+
+extension String {
+    func isPhoneNumber() -> Bool {
+        let PHONE_REGEX = "^\\+?[1-9]\\d{1,14}$"
+        return self.range(of: PHONE_REGEX, options: .regularExpression, range: nil, locale: nil) != nil
+    }
+}
