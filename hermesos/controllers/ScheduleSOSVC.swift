@@ -69,20 +69,15 @@ class ScheduleSOSVC : UIViewController {
     }
 }
 extension ScheduleSOSVC: UITextFieldDelegate {
-
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        if let txt = textField.text {
-            // If textfield is empty, add red border. Remove border otherwise.
-            if (txt.count <= 1 && string.isEmpty) {
-                textField.layer.borderColor = UIColor.red.cgColor
-                textField.layer.borderWidth = 1.0
-            } else {
-                textField.layer.borderWidth = 0
-            }
+        // If textfield is empty, add red border.
+        if let txt = textField.text, txt.count <= 1, string.isEmpty {
+            textField.layer.borderColor = UIColor.red.cgColor
+            textField.layer.borderWidth = 1.0
+        } else {
+            textField.layer.borderWidth = 0
         }
-        
-        return true;
+        return true
     }
 }
 extension ScheduleSOSVC: UITextViewDelegate {
