@@ -19,6 +19,9 @@ class ScheduleSOSVC : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        name.delegate = self
+        phone.delegate = self
+        message.delegate = self
     }
     
     @IBAction func cancelScheduling(_ sender: Any) {
@@ -26,13 +29,13 @@ class ScheduleSOSVC : UIViewController {
     }
     @IBAction func scheduleSOS(_ sender: Any) {
         guard
-            let name = name.text,
-            let phone = phone.text,
-            let message = message.text
+            let name = name.text, !name.isEmpty,
+            let phone = phone.text, phone.isPhoneNumber(),
+            let message = message.text, !message.isEmpty
         else {
             return
         }
-
+        
         let date = Date(timeIntervalSinceNow: self.time.countDownDuration)
         
         createSOS(message: message, name: name, phone: phone, countryCode: 1, date: date)
@@ -63,5 +66,27 @@ class ScheduleSOSVC : UIViewController {
                     print(JSON(data))
                 }
         }
+    }
+}
+extension ScheduleSOSVC: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        // If textfield is empty, add red border.
+        if let txt = textField.text, txt.count <= 1, string.isEmpty {
+            textField.layer.borderColor = UIColor.red.cgColor
+            textField.layer.borderWidth = 1.0
+        } else {
+            textField.layer.borderWidth = 0
+        }
+        return true
+    }
+}
+extension ScheduleSOSVC: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        if let txt = textView.text, txt.isEmpty {
+            textView.layer.borderColor = UIColor.red.cgColor
+            textView.layer.borderWidth = 1.0
+            return
+        }
+        textView.layer.borderWidth = 0
     }
 }
