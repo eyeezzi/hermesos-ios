@@ -26,9 +26,9 @@ class ScheduleSOSVC : UIViewController {
     }
     @IBAction func scheduleSOS(_ sender: Any) {
         guard
-            let name = name.text,
-            let phone = phone.text,
-            let message = message.text
+            let name = name.text, !name.isEmpty,
+            let phone = phone.text, phone.isPhoneNumber(),
+            let message = message.text, !message.isEmpty
         else {
             return
         }
