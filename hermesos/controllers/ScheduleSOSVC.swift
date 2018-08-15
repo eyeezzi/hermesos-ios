@@ -21,7 +21,7 @@ class ScheduleSOSVC : UIViewController {
         super.viewDidLoad()
         name.delegate = self
         phone.delegate = self
-//        message.delegate = self
+        message.delegate = self
     }
     
     @IBAction func cancelScheduling(_ sender: Any) {
@@ -83,5 +83,15 @@ extension ScheduleSOSVC: UITextFieldDelegate {
         }
         
         return true;
+    }
+}
+extension ScheduleSOSVC: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        if let txt = textView.text, txt.isEmpty {
+            textView.layer.borderColor = UIColor.red.cgColor
+            textView.layer.borderWidth = 1.0
+            return
+        }
+        textView.layer.borderWidth = 0
     }
 }
