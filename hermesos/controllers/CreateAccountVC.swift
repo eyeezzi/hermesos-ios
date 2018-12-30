@@ -84,7 +84,7 @@ class CreateAccountVC : UIViewController {
                 case .success(let value):
                     let json = JSON(value)
                     guard let jwt = json["jwt"].string else { return }
-                    UserDefaults.standard.saveToken(value: jwt)
+                    AccessTokenManager.saveToken(value: jwt)
                     self.performSegue(withIdentifier: "dismissCreateAccount", sender: nil)
                 case .failure(let error):
                     print(error)

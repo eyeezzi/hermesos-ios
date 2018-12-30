@@ -18,13 +18,26 @@
 		5971F28B211928E4007D36BC /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F28A211928E4007D36BC /* CreateAccountVC.swift */; };
 		5971F28D2119296B007D36BC /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F28C2119296B007D36BC /* ProfileVC.swift */; };
 		5971F28F21192997007D36BC /* SOSListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F28E21192997007D36BC /* SOSListVC.swift */; };
-		5971F2942119320D007D36BC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F2932119320D007D36BC /* Extensions.swift */; };
 		5971F29721194AA5007D36BC /* ScheduleSOSVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F29621194AA4007D36BC /* ScheduleSOSVC.swift */; };
 		5971F299211976F4007D36BC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F298211976F4007D36BC /* Constants.swift */; };
 		5971F29B211A3AEC007D36BC /* SOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F29A211A3AEC007D36BC /* SOS.swift */; };
 		5971F29D211A3AFF007D36BC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5971F29C211A3AFF007D36BC /* User.swift */; };
+		59A8D17221D8CC3F00762B8C /* AccessTokenManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A8D17121D8CC3F00762B8C /* AccessTokenManagerTests.swift */; };
+		59A8D17421D8CC7F00762B8C /* AccessTokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A8D17321D8CC7F00762B8C /* AccessTokenManager.swift */; };
+		59A8D17621D8D27400762B8C /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A8D17521D8D27400762B8C /* String+Additions.swift */; };
+		59A8D17821D8D2B000762B8C /* String+AdditionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A8D17721D8D2B000762B8C /* String+AdditionsTests.swift */; };
 		59D2681A211CF5010052838C /* SOSCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D26819211CF5010052838C /* SOSCell.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		59A8D16C21D8CB4E00762B8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5971F2672119094F007D36BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5971F26E2119094F007D36BC;
+			remoteInfo = hermesos;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		58196F1AF43EDFEFAFA60B95 /* Pods_hermesos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hermesos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,11 +53,16 @@
 		5971F28A211928E4007D36BC /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		5971F28C2119296B007D36BC /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		5971F28E21192997007D36BC /* SOSListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOSListVC.swift; sourceTree = "<group>"; };
-		5971F2932119320D007D36BC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5971F29621194AA4007D36BC /* ScheduleSOSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleSOSVC.swift; sourceTree = "<group>"; };
 		5971F298211976F4007D36BC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5971F29A211A3AEC007D36BC /* SOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOS.swift; sourceTree = "<group>"; };
 		5971F29C211A3AFF007D36BC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		59A8D16721D8CB4E00762B8C /* hermesosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hermesosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		59A8D16B21D8CB4E00762B8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59A8D17121D8CC3F00762B8C /* AccessTokenManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenManagerTests.swift; sourceTree = "<group>"; };
+		59A8D17321D8CC7F00762B8C /* AccessTokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenManager.swift; sourceTree = "<group>"; };
+		59A8D17521D8D27400762B8C /* String+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
+		59A8D17721D8D2B000762B8C /* String+AdditionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AdditionsTests.swift"; sourceTree = "<group>"; };
 		59D26819211CF5010052838C /* SOSCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOSCell.swift; sourceTree = "<group>"; };
 		6AB24153BF2897C2987B4B3B /* Pods-hermesos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hermesos.release.xcconfig"; path = "Pods/Target Support Files/Pods-hermesos/Pods-hermesos.release.xcconfig"; sourceTree = "<group>"; };
 		9C8F5F95B4E9E9F8903F8D0A /* Pods-hermesos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hermesos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hermesos/Pods-hermesos.debug.xcconfig"; sourceTree = "<group>"; };
@@ -56,6 +74,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				539467FCDBD3EB1EF66C8852 /* Pods_hermesos.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59A8D16421D8CB4E00762B8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				5971F2712119094F007D36BC /* hermesos */,
+				59A8D16821D8CB4E00762B8C /* hermesosTests */,
 				5971F2702119094F007D36BC /* Products */,
 				6B660194A4AF85B009FAD7AA /* Pods */,
 				2DF8B82506EC612DF3AF6273 /* Frameworks */,
@@ -84,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				5971F26F2119094F007D36BC /* hermesos.app */,
+				59A8D16721D8CB4E00762B8C /* hermesosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,7 +164,8 @@
 		5971F29521193211007D36BC /* helpers */ = {
 			isa = PBXGroup;
 			children = (
-				5971F2932119320D007D36BC /* Extensions.swift */,
+				59A8D17521D8D27400762B8C /* String+Additions.swift */,
+				59A8D17321D8CC7F00762B8C /* AccessTokenManager.swift */,
 				5971F298211976F4007D36BC /* Constants.swift */,
 			);
 			path = helpers;
@@ -150,6 +178,16 @@
 				5971F29C211A3AFF007D36BC /* User.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		59A8D16821D8CB4E00762B8C /* hermesosTests */ = {
+			isa = PBXGroup;
+			children = (
+				59A8D17121D8CC3F00762B8C /* AccessTokenManagerTests.swift */,
+				59A8D17721D8D2B000762B8C /* String+AdditionsTests.swift */,
+				59A8D16B21D8CB4E00762B8C /* Info.plist */,
+			);
+			path = hermesosTests;
 			sourceTree = "<group>";
 		};
 		6B660194A4AF85B009FAD7AA /* Pods */ = {
@@ -183,18 +221,40 @@
 			productReference = 5971F26F2119094F007D36BC /* hermesos.app */;
 			productType = "com.apple.product-type.application";
 		};
+		59A8D16621D8CB4E00762B8C /* hermesosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59A8D17021D8CB4E00762B8C /* Build configuration list for PBXNativeTarget "hermesosTests" */;
+			buildPhases = (
+				59A8D16321D8CB4E00762B8C /* Sources */,
+				59A8D16421D8CB4E00762B8C /* Frameworks */,
+				59A8D16521D8CB4E00762B8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59A8D16D21D8CB4E00762B8C /* PBXTargetDependency */,
+			);
+			name = hermesosTests;
+			productName = hermesosTests;
+			productReference = 59A8D16721D8CB4E00762B8C /* hermesosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		5971F2672119094F007D36BC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = eyeezzi;
 				TargetAttributes = {
 					5971F26E2119094F007D36BC = {
 						CreatedOnToolsVersion = 9.4.1;
+					};
+					59A8D16621D8CB4E00762B8C = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 5971F26E2119094F007D36BC;
 					};
 				};
 			};
@@ -212,6 +272,7 @@
 			projectRoot = "";
 			targets = (
 				5971F26E2119094F007D36BC /* hermesos */,
+				59A8D16621D8CB4E00762B8C /* hermesosTests */,
 			);
 		};
 /* End PBXProject section */
@@ -224,6 +285,13 @@
 				5971F27D21190952007D36BC /* LaunchScreen.storyboard in Resources */,
 				5971F27A21190952007D36BC /* Assets.xcassets in Resources */,
 				5971F2782119094F007D36BC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59A8D16521D8CB4E00762B8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,12 +325,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-hermesos/Pods-hermesos-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,19 +351,37 @@
 				5971F28D2119296B007D36BC /* ProfileVC.swift in Sources */,
 				5971F28B211928E4007D36BC /* CreateAccountVC.swift in Sources */,
 				5971F29B211A3AEC007D36BC /* SOS.swift in Sources */,
-				5971F2942119320D007D36BC /* Extensions.swift in Sources */,
+				59A8D17421D8CC7F00762B8C /* AccessTokenManager.swift in Sources */,
 				5971F28F21192997007D36BC /* SOSListVC.swift in Sources */,
 				5971F299211976F4007D36BC /* Constants.swift in Sources */,
 				59D2681A211CF5010052838C /* SOSCell.swift in Sources */,
 				5971F285211924C0007D36BC /* DismissSegue.swift in Sources */,
 				5971F29D211A3AFF007D36BC /* User.swift in Sources */,
+				59A8D17621D8D27400762B8C /* String+Additions.swift in Sources */,
 				5971F2732119094F007D36BC /* AppDelegate.swift in Sources */,
 				5971F289211928B6007D36BC /* SignInVC.swift in Sources */,
 				5971F29721194AA5007D36BC /* ScheduleSOSVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		59A8D16321D8CB4E00762B8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59A8D17821D8D2B000762B8C /* String+AdditionsTests.swift in Sources */,
+				59A8D17221D8CC3F00762B8C /* AccessTokenManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		59A8D16D21D8CB4E00762B8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5971F26E2119094F007D36BC /* hermesos */;
+			targetProxy = 59A8D16C21D8CB4E00762B8C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5971F2762119094F007D36BC /* Main.storyboard */ = {
@@ -465,6 +553,51 @@
 			};
 			name = Release;
 		};
+		59A8D16E21D8CB4E00762B8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 498M3Q9W4B;
+				INFOPLIST_FILE = hermesosTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eyeezzi.apps.hermesosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hermesos.app/hermesos";
+			};
+			name = Debug;
+		};
+		59A8D16F21D8CB4E00762B8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 498M3Q9W4B;
+				INFOPLIST_FILE = hermesosTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eyeezzi.apps.hermesosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hermesos.app/hermesos";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -482,6 +615,15 @@
 			buildConfigurations = (
 				5971F28221190952007D36BC /* Debug */,
 				5971F28321190952007D36BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59A8D17021D8CB4E00762B8C /* Build configuration list for PBXNativeTarget "hermesosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59A8D16E21D8CB4E00762B8C /* Debug */,
+				59A8D16F21D8CB4E00762B8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
