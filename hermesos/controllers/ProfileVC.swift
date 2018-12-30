@@ -33,7 +33,7 @@ class ProfileVC : UIViewController {
     
     func fetchProfile() {
         let headers: HTTPHeaders = [
-            "x-access-token": UserDefaults.standard.getToken() ?? ""
+            "x-access-token": AccessTokenManager.getToken() ?? ""
         ]
         Alamofire.request(Endpoints.PROFILE, method: .get, headers: headers)
             .validate()
@@ -52,13 +52,13 @@ class ProfileVC : UIViewController {
     }
     
     @IBAction func signOut(_ sender: Any) {
-        UserDefaults.standard.deleteToken()
+        AccessTokenManager.deleteToken()
         performSegue(withIdentifier: "dismissProfile", sender: nil)
     }
     
     @IBAction func deleteAccount(_ sender: Any) {
         let headers: HTTPHeaders = [
-            "x-access-token": UserDefaults.standard.getToken() ?? ""
+            "x-access-token": AccessTokenManager.getToken() ?? ""
         ]
         
         Alamofire.request(Endpoints.PROFILE, method: .delete, headers: headers)
@@ -68,7 +68,7 @@ class ProfileVC : UIViewController {
                 case .success(let value):
                     let json = JSON(value)
                     print(json)
-                    UserDefaults.standard.deleteToken()
+                    AccessTokenManager.deleteToken()
                     self.performSegue(withIdentifier: "dismissProfile", sender: nil)
                 case .failure(let error):
                     print(error.localizedDescription)

@@ -43,7 +43,7 @@ class ScheduleSOSVC : UIViewController {
     
     func createSOS(message: String, name: String, phone: String, countryCode: Int, date: Date) {
         let headers: HTTPHeaders = [
-            "x-access-token": UserDefaults.standard.getToken() ?? ""
+            "x-access-token": AccessTokenManager.getToken() ?? ""
         ]
         let body: Parameters = [
             "message": message,

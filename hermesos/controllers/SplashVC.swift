@@ -19,7 +19,7 @@ class SplashVC : UIViewController {
     }
     
     fileprivate func decidePath() {
-        guard let _ = UserDefaults.standard.getToken() else {
+        guard let _ = AccessTokenManager.getToken() else {
             performSegue(withIdentifier: "gotoLogin", sender: nil)
             return
         }

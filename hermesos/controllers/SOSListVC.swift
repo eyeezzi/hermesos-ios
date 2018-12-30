@@ -24,7 +24,7 @@ class SOSListVC : UITableViewController {
     
     func fetchSOS() {
         let headers: HTTPHeaders = [
-            "x-access-token": UserDefaults.standard.getToken() ?? ""
+            "x-access-token": AccessTokenManager.getToken() ?? ""
         ]
         Alamofire.request(Endpoints.SOS, method: .get, headers: headers)
             .validate()
@@ -83,7 +83,7 @@ extension SOSListVC: SOSCellDelegate {
             let indexPath = tableView.indexPath(for: cell) else { return }
         
         let headers: HTTPHeaders = [
-            "x-access-token": UserDefaults.standard.getToken() ?? ""
+            "x-access-token": AccessTokenManager.getToken() ?? ""
         ]
         
         let endpoint = Endpoints.SOS + "/" + sos.id
